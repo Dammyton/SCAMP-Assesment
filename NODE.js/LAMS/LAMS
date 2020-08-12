@@ -1,0 +1,42 @@
+Intructions:
+
+Authenticication
+-Admin: Login with email & Password
+-User: Signup & Login with my details
+
+Documentation
+- Requirements for the endpoints
+
+Deployment
+- Host on heroku and submit the url
+
+
+====================================================================================================
+
+
+Implementation Steps:
+- npm init
+- npm install express express-validator body-parser bcryptjs jsonwebtoken mongoose --save
+- Create an index.js file, Setup your server by adding the necessary code to index.js file
+- To start your server, type "node index.js" in the terminal
+- Setup your database: You can either use cloud MongoDB server(e.g mlab) or local MongoDB server. 
+  You should have a mongoDB URI like this; mongodb://<dbuser>:<dbpassword>@ds163758.mlab.com:63758/lams
+- Create a config folder to keep the database connection information
+  Create a file named "db.js" in config folder
+- Create a model folder and add your schema files in it
+- Create a routes folder and add your necessary routing files (registration & login authenticication code)
+- Import the files in the routes folde into "index.js" to make it work.
+- Test the API on Postman to know if it is working perfectly!
+
+============================================================================================================
+
+
+Deployment on Heroku:
+
+Heroku CLI for ubuntu: sudo snap install --classic heroku
+
+- heroku login
+- Simply create a Procfile (without any file extension) and add "web: node index.js"
+- heroku create
+- git push heroku master
+
